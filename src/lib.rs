@@ -1,4 +1,4 @@
-//! # A neat (but over-engineered) actor library
+//! # A neat actor/threading library
 //!
 //! ## Overview
 //!
