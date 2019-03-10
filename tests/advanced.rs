@@ -6,7 +6,7 @@ actor! {
         input:
             ChangeSource(String),
             SendState,
-        // By default, Input struct does not have any trait auto-implemented.
+        // By default, Input enum does not have any trait auto-implemented.
         input_derive: Debug, PartialEq,
         // Whitespace and comments are irrelevant.
         // It's also optional to end sections (attributes) with a comma, with
