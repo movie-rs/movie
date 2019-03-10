@@ -26,7 +26,6 @@
 //! ```toml
 //! [dependencies]
 //! "movie" = "0.1"
-//! "movie_utils" = "0.1"
 //! ```
 //!
 //! ### The simplest actor
