@@ -11,7 +11,7 @@ actor! {
         // Whitespace and comments are irrelevant.
         // It's also optional to end sections (attributes) with a comma, with
         // exception of code attributes (on_stop, on_init etc.), which should
-        // not end with comma, but either with nothing or with a semicolon.
+        // not end with comma, but rather either with nothing or with a semicolon.
         data:
             pub device: String,
             pub lines_parsed: u64,
