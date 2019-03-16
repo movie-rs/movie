@@ -73,7 +73,6 @@
 //!         // not end with comma, but rather either with nothing or with a semicolon.
 //!         data:
 //!             pub device: String,
-//!             pub lines_parsed: u64,
 //!             // Actors have their own modules, so in order to reference
 //!             // the `use Sender` statement located above this `actor!` invocation,
 //!             // we need to use `super::`. Similarly in case of custom types.
@@ -82,16 +81,21 @@
 //!             if self.device == "admin secret device" {
 //!                 panic!("No access right for admin secret device");
 //!             }
+//!             let mut lines_parsed = 0; // This variable will be exposed to on_message.
+//!                                       // This is suboptimal, but it is the simplest
+//!                                       // way to allow for thread-local variables (`data`
+//!                                       // is sent between threads, so it couldn't be used
+//!                                       // e.g. for GTK references)
 //!         on_message:
 //!             ChangeSource(name) => {
 //!                 self.device = name;
 //!             },
 //!             SendState => {
-//!                 self.state_tx.send(self.lines_parsed).unwrap();
+//!                 self.state_tx.send(lines_parsed).unwrap();
 //!             }
 //!         tick_interval: 5, // Every 5ms, default = 100
 //!         on_tick: // on_message have priority over on_tick
-//!             self.lines_parsed += 1;
+//!             lines_parsed += 1;
 //!         on_stop: ()
 //!         // custom_code must end with a semicolon
 //!         custom_code:
@@ -106,11 +110,10 @@
 //!     let (tx, rx) = channel();
 //!     let cfg = Actor {
 //!         device: DEFAULT_DEVICE.to_string(),
-//!         lines_parsed: 0,
 //!         state_tx: tx,
 //!     };
 //!     // Spawn the actor, let on_init run
-//!     let actor = cfg.start();
+//!     let actor = cfg.start(); // returns StreamParsingActor::Handle
 //!
 //!     use std::thread::sleep;
 //!     use std::time::Duration;
@@ -140,7 +143,10 @@
 //! - `spawner` - optional, name of the function that spawns thread (by default
 //!   `std::thread::spawn`, put a function with similar signature here to have actors be run
 //!   as futures, M:N threads etc.)
+//! - `spawner_return_type` - optional, return type of `spawner` (by default
+//!   `std::thread::JoinHandle<()>`)
 //! - `custom_code` - optional, code to be inserted into generated actor module
+//! - `public_visibility` - optional, if `true`, then the actor module is public
 //!
 //! Some code can break macro internals (e.g. `break` or `continue` without
 //! defining your own loop can break actor's main loop, putting `on_stop: (),` will result
