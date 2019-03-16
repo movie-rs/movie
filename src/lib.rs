@@ -47,7 +47,7 @@
 //! fn test_simple_actor() {
 //!     use SimpleActor::{Actor, Input};
 //!     // Create and spawn the actor
-//!     let mut actor = Actor {}.start();
+//!     let actor = Actor {}.start();
 //!
 //!     actor.send(Input::Ping);
 //!     actor.stop(); // Will block, waiting for actor.
@@ -110,7 +110,7 @@
 //!         state_tx: tx,
 //!     };
 //!     // Spawn the actor, let on_init run
-//!     let mut actor = cfg.start();
+//!     let actor = cfg.start();
 //!
 //!     use std::thread::sleep;
 //!     use std::time::Duration;

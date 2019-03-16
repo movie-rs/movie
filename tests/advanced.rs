@@ -51,7 +51,7 @@ fn test_stream_parsing_actor() {
         state_tx: tx,
     };
     // Spawn the actor, let on_init run
-    let mut actor = cfg.start();
+    let actor = cfg.start();
 
     use std::thread::sleep;
     use std::time::Duration;
