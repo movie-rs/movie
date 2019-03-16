@@ -1,5 +1,7 @@
 use movie::actor;
 
+actor! { SimplestActor } // completely useless
+
 actor! {
     SimpleActor
         input: Ping,

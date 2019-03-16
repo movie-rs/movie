@@ -31,10 +31,12 @@
 //! "movie" = "0.1"
 //! ```
 //!
-//! ### The simplest actor
+//! ### Simple actor
 //!
 //! ```rust,ignore
 //! use movie::actor;
+//!
+//! actor! { SimplestActor } // completely useless
 //!
 //! actor! {
 //!     SimpleActor
@@ -131,22 +133,22 @@
 //!
 //! These words if followed by colon, are restricted keywords.
 //!
-//! - `input` - required, defines `Input` enum
-//! - `input_derive` - optional, `#[derive()]` for `Input` enum
-//! - `data` - optional, actor stateful variables, need to be set when creating actor
-//! - `on_init` - optional, runs just before an actor starts accepting messages
-//! - `on_message` - required, defines `match message` logic
-//! - `tick_interval` - optional, time in milliseconds between tick. When undefined, set to 100ms.
+//! - `input` - defines `Input` enum
+//! - `input_derive` - `#[derive()]` for `Input` enum
+//! - `data` - actor stateful variables, need to be set when creating actor
+//! - `on_init` - runs just before an actor starts accepting messages
+//! - `on_message` - defines `match message` logic
+//! - `tick_interval` - time in milliseconds between tick. When undefined, set to 100ms.
 //!    Affects message polling, so don't set it too high.
-//! - `on_tick` - optional, runs every tick
-//! - `on_stop` - optional, runs just after an actor stops accepting messages
-//! - `spawner` - optional, name of the function that spawns thread (by default
+//! - `on_tick` - runs every tick
+//! - `on_stop` - runs just after an actor stops accepting messages
+//! - `spawner` - name of the function that spawns thread (by default
 //!   `std::thread::spawn`, put a function with similar signature here to have actors be run
 //!   as futures, M:N threads etc.)
-//! - `spawner_return_type` - optional, return type of `spawner` (by default
+//! - `spawner_return_type` - return type of `spawner` (by default
 //!   `std::thread::JoinHandle<()>`)
-//! - `custom_code` - optional, code to be inserted into generated actor module
-//! - `public_visibility` - optional, if `true`, then the actor module is public
+//! - `custom_code` - code to be inserted into generated actor module
+//! - `public_visibility` - if `true`, then the actor module is public
 //!
 //! Some code can break macro internals (e.g. `break` or `continue` without
 //! defining your own loop can break actor's main loop, putting `on_stop: (),` will result
