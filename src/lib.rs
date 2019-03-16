@@ -137,6 +137,9 @@
 //!    Affects message polling, so don't set it too high.
 //! - `on_tick` - optional, runs every tick
 //! - `on_stop` - optional, runs just after an actor stops accepting messages
+//! - `spawner` - optional, name of the function that spawns thread (by default
+//!   `std::thread::spawn`, put a function with similar signature here to have actors be run
+//!   as futures, M:N threads etc.)
 //! - `custom_code` - optional, code to be inserted into generated actor module
 //!
 //! Some code can break macro internals (e.g. `break` or `continue` without
