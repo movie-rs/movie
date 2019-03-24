@@ -3,6 +3,7 @@ name = "movie_example"
 version = "0.1.0"
 authors = ["Paweł Zmarzły <pawo2500@gmail.com>"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
 "movie" = { path = ".." }

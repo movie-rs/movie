@@ -188,10 +188,38 @@
 //!
 //! - [`x11-input-supercharger`] by me
 //!
+//! ## Docs
+//!
+//! README.md is built using [`cargo-readme`] (`cargo readme > README.md`). The documentation
+//! is built by [`docs.sh`] script.
+//!
+//! ## License
+//!
+//! Copyright 2019 Paweł Zmarzły. Licensed under either of
+//!
+//!  * Apache License, Version 2.0
+//!    ([`LICENSE-APACHE.md`] or [https://www.apache.org/licenses/LICENSE-2.0])
+//!  * MIT license
+//!    ([`LICENSE-MIT.md`] or [https://opensource.org/licenses/MIT])
+//!
+//! at your option.
+//!
+//! ## Contribution
+//!
+//! Unless you explicitly state otherwise, any contribution intentionally submitted
+//! for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
+//! dual licensed as above, without any additional terms or conditions.
+//!
 //! [`x11-input-supercharger`]: https://github.com/pzmarzly/x11-input-supercharger
 //! [`actix`]: https://actix.rs
 //! [`actress`]: https://docs.rs/actress/0.1.0/actress
 //! [Github]: https://github.com/pzmarzly
+//! [`cargo-readme`]: https://github.com/livioribeiro/cargo-readme
+//! [`docs.sh`]: https://github.com/movie-rs/movie/blob/master/docs.sh
+//! [`LICENSE-APACHE.md`]: https://github.com/movie-rs/movie/blob/master/LICENSE-APACHE.md
+//! [https://www.apache.org/licenses/LICENSE-2.0]: https://www.apache.org/licenses/LICENSE-2.0
+//! [`LICENSE-MIT.md`]: https://github.com/movie-rs/movie/blob/master/LICENSE-MIT.md
+//! [https://opensource.org/licenses/MIT]: https://opensource.org/licenses/MIT
 
 pub use movie_derive::*;
 pub use movie_utils::*;

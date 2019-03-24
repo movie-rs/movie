@@ -3,6 +3,13 @@ name = "movie"
 version = "0.1.0"
 authors = ["Paweł Zmarzły <pawo2500@gmail.com>"]
 edition = "2018"
+license = "MIT OR Apache-2.0"
+description = "An actor / thread orchestration library / macro / framework"
+repository = "https://github.com/movie-rs/movie"
+readme = "README.md"
+#keywords
+#categories
+documentation = "https://movie.pzmarzly.pl/movie"
 
 [dependencies]
 "movie_utils" = { path = "movie_utils" }
