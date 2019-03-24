@@ -75,10 +75,7 @@
 //!         // not end with comma, but rather either with nothing or with a semicolon.
 //!         data:
 //!             pub device: String,
-//!             // Actors have their own modules, so in order to reference
-//!             // the `use Sender` statement located above this `actor!` invocation,
-//!             // we need to use `super::`. Similarly in case of custom types.
-//!             pub state_tx: super::Sender<u64>,
+//!             pub state_tx: Sender<u64>,
 //!         on_init:
 //!             if self.device == "admin secret device" {
 //!                 panic!("No access right for admin secret device");
