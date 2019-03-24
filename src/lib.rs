@@ -11,7 +11,7 @@
 //! - by default, one actor = one thread
 //! - by default, actors only accept messages, they do not send replies
 //!   - solution to sending replies is not the most elegant right now,
-//!     see "Advanced example" below
+//!     see [Advanced example](#advanced-example) below
 //! - network RPC should be possible but is beyond the scope of this crate.
 //!   If you want to do this, you can use `input_derive` and `custom_code` to
 //!   derive `Serialize` and `Deserialize`.
