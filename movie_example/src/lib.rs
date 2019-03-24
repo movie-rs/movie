@@ -2,8 +2,6 @@
 
 //! # Example crate using `movie` library
 //!
-//! See ['movie'].
-//!
 //! Code of this crate:
 //!
 //! ```rust,ignore
