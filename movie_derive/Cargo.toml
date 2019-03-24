@@ -1,9 +1,11 @@
 [package]
-name = "movie"
+name = "movie_derive"
 version = "0.1.0"
 authors = ["Paweł Zmarzły <pawo2500@gmail.com>"]
 edition = "2018"
 
+[lib]
+proc-macro = true
+
 [dependencies]
-"movie_utils" = { path = "movie_utils" }
-"movie_derive" = { path = "movie_derive" }
+movie_utils = {path = "../movie_utils"}
