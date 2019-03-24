@@ -171,16 +171,17 @@ grown to become quite a hindrance when it comes to code readability, especially 
 the threads also had to do their own work in addition to reacting to messages
 (the work includes interacting with X11, GTK3, and tracking time). Instead of using
 [`actix`], I decided to try to implement my own library, inspired by [`actress`], and
-spent about 12 hours doing so (I'm far from being a fluent Rust programmer).
+spent about 12 hours doing so (I'm far from being a fluent Rust programmer, also, this
+was my first time using procedural macros).
 
 This is my first "real" library (my previous crates/Rust programs were CLI/GUI utilities,
 sometimes with simple public Rust API). I published some of them to crates.io, but not all
 (some are on [Github], some not published yet). I learned about procedural macros (mostly about
 their current shortcomings) - sadly, there are not many good resources about them.
 I sticked mostly to Rust reference. Surprisingly, I was also unable to quickly Google the
-"right" way to do documentation (links and examples) - so I used the first edition of Rust
+"right" way to do documentation (with links and examples) - so I used the first edition of Rust
 book. I should probably finally read the second edition to familiarize myself with what's
-inside and where it is.
+inside and where it is (back when I started, there was no second edition yet).
 
 ### Usage in the wild
 
