@@ -1,3 +1,5 @@
+#![doc(html_root_url = "https://movie.pzmarzly.pl")]
+
 //! # Example crate using `movie` library
 //!
 //! See ['movie'].

@@ -1,3 +1,5 @@
+#![doc(html_root_url = "https://movie.pzmarzly.pl")]
+
 //! `movie_utils` - crate containing `Handle` type and `JoinableHandle` trait.
 
 use std::thread::JoinHandle;

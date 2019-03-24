@@ -1,3 +1,5 @@
+#![doc(html_root_url = "https://movie.pzmarzly.pl")]
+
 //! `movie_derive` - crate containing procedural macros.
 
 extern crate proc_macro;

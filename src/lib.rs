@@ -1,3 +1,5 @@
+#![doc(html_root_url = "https://movie.pzmarzly.pl")]
+
 //! # An actor/thread orchestration library
 //!
 //! ## Overview
