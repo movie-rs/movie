@@ -180,6 +180,13 @@
 //! book. I should probably finally read the second edition to familiarize myself with what's
 //! inside and where it is.
 //!
+//! ## Usage in the wild
+//!
+//! If you use this library in your project, consider putting it here (if possible). It will
+//! help me with testing whether the new change I introduce breaks anything.
+//!
+//! - [`x11-input-supercharger`] by me
+//!
 //! [`x11-input-supercharger`]: https://github.com/pzmarzly/x11-input-supercharger
 //! [`actix`]: https://actix.rs
 //! [`actress`]: https://docs.rs/actress/0.1.0/actress
