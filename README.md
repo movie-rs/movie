@@ -66,6 +66,9 @@ use movie::actor;
 use std::sync::mpsc::Sender;
 actor! {
     StreamParsingActor
+        public_visibility: true,
+        docs: /// Actor that parses video from V4L2 device
+              /// It's very consistent - failed every time so far.
         input:
             ChangeSource(String),
             SendState,
@@ -148,6 +151,7 @@ These words if followed by colon, are restricted keywords.
   `std::thread::JoinHandle<()>`)
 - `custom_code` - code to be inserted into generated actor module
 - `public_visibility` - if `true`, then the actor module is public
+- `docs` - place docs here - e.g. `docs: /// An actor`
 
 Some code can break macro internals (e.g. `break` or `continue` without
 defining your own loop can break actor's main loop, putting `on_stop: (),` will result
@@ -177,6 +181,13 @@ I sticked mostly to Rust reference. Surprisingly, I was also unable to quickly G
 "right" way to do documentation (links and examples) - so I used the first edition of Rust
 book. I should probably finally read the second edition to familiarize myself with what's
 inside and where it is.
+
+### Usage in the wild
+
+If you use this library in your project, consider putting it here (if possible). It will
+help me with testing whether the new change I introduce breaks anything.
+
+- [`x11-input-supercharger`] by me
 
 [`x11-input-supercharger`]: https://github.com/pzmarzly/x11-input-supercharger
 [`actix`]: https://actix.rs
