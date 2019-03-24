@@ -3,6 +3,9 @@ use movie::actor;
 use std::sync::mpsc::Sender;
 actor! {
     StreamParsingActor
+        public_visibility: true,
+        docs: /// Actor that parses video from V4L2 device
+              /// It's very consistent - failed every time so far.
         input:
             ChangeSource(String),
             SendState,

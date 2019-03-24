@@ -64,6 +64,9 @@
 //! use std::sync::mpsc::Sender;
 //! actor! {
 //!     StreamParsingActor
+//!         public_visibility: true,
+//!         docs: /// Actor that parses video from V4L2 device
+//!               /// It's very consistent - failed every time so far.
 //!         input:
 //!             ChangeSource(String),
 //!             SendState,
@@ -146,6 +149,7 @@
 //!   `std::thread::JoinHandle<()>`)
 //! - `custom_code` - code to be inserted into generated actor module
 //! - `public_visibility` - if `true`, then the actor module is public
+//! - `docs` - place docs here - e.g. `docs: /// An actor`
 //!
 //! Some code can break macro internals (e.g. `break` or `continue` without
 //! defining your own loop can break actor's main loop, putting `on_stop: (),` will result
