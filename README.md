@@ -2,6 +2,10 @@
 
 ## An actor/thread orchestration library
 
+[crates.io](https://crates.io/crates/movie)
+[repo](https://github.com/movie-rs/movie)
+[docs](https://movie.pzmarzly.pl/movie)
+
 ### Overview
 
 - next to no boilerplate - see examples
