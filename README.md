@@ -156,7 +156,7 @@ These words if followed by colon, are restricted keywords.
 Some code can break macro internals (e.g. `break` or `continue` without
 defining your own loop can break actor's main loop, putting `on_stop: (),` will result
 in an invalid comma). Debugging it can be cryptic, hopefully [`actor_dbg`] (when the code
-doesn't compile) and `cargo expand` (when it does) will help you in such situations.
+doesn't compile) and [`cargo-expand`] (when it does) will help you in such situations.
 
 ### History
 
@@ -214,6 +214,7 @@ dual licensed as above, without any additional terms or conditions.
 
 [`movie_derive`]: ../movie_derive/index.html
 [`actor_dbg`]: ../movie_derive/macro.actor_dbg.html
+[`cargo-expand`]: https://github.com/dtolnay/cargo-expand
 [`x11-input-supercharger`]: https://github.com/pzmarzly/x11-input-supercharger
 [`actix`]: https://actix.rs
 [`actress`]: https://docs.rs/actress/0.1.0/actress
