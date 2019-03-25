@@ -198,6 +198,10 @@
 //!
 //! - [`x11-input-supercharger`] by me - see the [auto-scrolling actor]
 //!
+//! ## FAQ
+//!
+//! See the [original announcement on Reddit](https://www.reddit.com/r/rust/comments/b59zt9/first_crate_movie_an_actor_library/).
+//!
 //! ## Docs
 //!
 //! README.md is built using [`cargo-readme`] (`cargo readme > README.md`). The documentation
