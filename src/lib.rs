@@ -188,7 +188,7 @@
 //! If you use this library in your project, consider putting it here (if possible). It will
 //! help me with testing whether the new change I introduce breaks anything.
 //!
-//! - [`x11-input-supercharger`] by me
+//! - [`x11-input-supercharger`] by me - see the [auto-scrolling actor]
 //!
 //! ## Docs
 //!
@@ -219,6 +219,7 @@
 //! [`actix`]: https://actix.rs
 //! [`actress`]: https://docs.rs/actress/0.1.0/actress
 //! [Github]: https://github.com/pzmarzly
+//! [auto-scrolling actor]: https://github.com/pzmarzly/x11-input-supercharger/blob/7b09b577e6aef15aaf82cfef84082160d5593561/src/features/scroll.rs#L84-L118
 //! [`cargo-readme`]: https://github.com/livioribeiro/cargo-readme
 //! [`docs.sh`]: https://github.com/movie-rs/movie/blob/master/docs.sh
 //! [`LICENSE-APACHE.md`]: https://github.com/movie-rs/movie/blob/master/LICENSE-APACHE.md
