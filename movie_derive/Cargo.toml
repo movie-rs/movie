@@ -10,4 +10,4 @@ publish = false
 proc-macro = true
 
 [dependencies]
-movie_utils = {path = "../movie_utils"}
+movie_utils = { path = "../movie_utils", version = "0.1.0" }
