@@ -15,7 +15,7 @@
 //! - network RPC should be possible but is beyond the scope of this crate.
 //!   If you want to do this, you can use `input_derive` and `custom_code` to
 //!   derive `Serialize` and `Deserialize`.
-//! - two procedural macros - see [`movie_derive`](../movie_derive/index.html)
+//! - two procedural macros - see [`movie_derive`]
 //! - actors need to be defined in module/crate scope
 //! - bad error messages for now, macro + manual string parsing magic
 //! - in case of large breaking changes in (stable) `TokenStream::to_string()`,
@@ -155,7 +155,7 @@
 //!
 //! Some code can break macro internals (e.g. `break` or `continue` without
 //! defining your own loop can break actor's main loop, putting `on_stop: (),` will result
-//! in an invalid comma). Debugging it can be cryptic, hopefully `actor_dbg` (when the code
+//! in an invalid comma). Debugging it can be cryptic, hopefully [`actor_dbg`] (when the code
 //! doesn't compile) and `cargo expand` (when it does) will help you in such situations.
 //!
 //! ## History
@@ -212,6 +212,8 @@
 //! for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
 //! dual licensed as above, without any additional terms or conditions.
 //!
+//! [`movie_derive`]: ../movie_derive/index.html
+//! [`actor_dbg`]: ../movie_derive/macro.actor_dbg.html
 //! [`x11-input-supercharger`]: https://github.com/pzmarzly/x11-input-supercharger
 //! [`actix`]: https://actix.rs
 //! [`actress`]: https://docs.rs/actress/0.1.0/actress
