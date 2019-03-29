@@ -224,9 +224,9 @@
 //! for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
 //! dual licensed as above, without any additional terms or conditions.
 //!
-//! [`movie_derive`]: ../movie_derive/index.html
-//! [`movie_example`]: ../movie_example/index.html
-//! [`actor_dbg`]: ../movie_derive/macro.actor_dbg.html
+//! [`movie_derive`]: https://movie.pzmarzly.pl/movie_derive/index.html
+//! [`movie_example`]: https://movie.pzmarzly.pl/movie_example/index.html
+//! [`actor_dbg`]: https://movie.pzmarzly.pl/movie_derive/macro.actor_dbg.html
 //! [`cargo-expand`]: https://github.com/dtolnay/cargo-expand
 //! [`x11-input-supercharger`]: https://github.com/pzmarzly/x11-input-supercharger
 //! [`actix`]: https://actix.rs
